@@ -1,12 +1,23 @@
-﻿<Window x:Class="TaskBots.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TaskBots"
+        xmlns:CustomControls="clr-namespace:TaskBots.Model.Control.CustomControls" x:Class="TaskBots.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        
+        <Canvas Loaded="Canvas_Loaded" Background="#FF024589">
+            <Button x:Name="button" Content="Add" Canvas.Left="10" Canvas.Top="10" Width="177" Height="47" Foreground="#FFE2E5EE" FontSize="20" MouseDown="Button_MouseDown" Click="Button_Click">
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FF095BB0" Offset="1"/>
+                        <GradientStop Color="#00024589"/>
+                        <GradientStop Color="#EC0859AC" Offset="0.927"/>
+                    </RadialGradientBrush>
+                </Button.Background>
+            </Button>
+        </Canvas>
     </Grid>
 </Window>
